@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import TopNav from './components/TopNav/TopNav';
+import './index.scss';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class Root extends React.Component {
+    render() {
+        return (
+            <div className="page-container">
+            <TopNav/>
+            </div>
+        );
+    }
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+    <Root />,
+    document.getElementById('root')
+);
+
+
+//TODO
+https://material-ui.com/getting-started/installation/
